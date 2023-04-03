@@ -10,5 +10,5 @@ public class Cliente {
     int id;
     String nome;
     @CPF
-    int cpf;
+    long cpf;
 }

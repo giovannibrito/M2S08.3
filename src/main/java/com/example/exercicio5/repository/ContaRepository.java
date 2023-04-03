@@ -8,6 +8,9 @@ import java.util.Optional;
 public class ContaRepository {
     static ArrayList<Conta> contas = new ArrayList<>();
 
+    public static ArrayList<Conta> getContas(){
+        return contas;
+    }
     public static Conta buscarConta(int id){
         Optional<Conta> conta = contas.stream().filter(cnt -> cnt.getId() == id).findAny();
         return conta.orElse(null);
