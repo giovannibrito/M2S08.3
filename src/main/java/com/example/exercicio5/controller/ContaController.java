@@ -24,4 +24,8 @@ public class ContaController {
     public void criarConta(@RequestBody Conta conta){
         ContaRepository.adicionarConta(conta);
     }
+    @DeleteMapping("/{id}")
+    public void excluirConta(@PathVariable int id){
+        ContaRepository.excluirConta(id);
+    }
 }

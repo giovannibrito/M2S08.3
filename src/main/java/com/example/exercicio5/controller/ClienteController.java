@@ -24,4 +24,15 @@ public class ClienteController {
     public void criarCliente(@RequestBody Cliente cliente){
         ClienteRepository.adicionarCliente(cliente);
     }
+
+    @PutMapping("/{id}")
+    public void editarCliente(@RequestBody Cliente cliente, @PathVariable int id){
+        ClienteRepository.buscarCliente(id).setNome(cliente.getNome());
+        ClienteRepository.buscarCliente(id).setCpf(cliente.getCpf());
+    }
+
+    @DeleteMapping("/{id}")
+    public void excluirCliente(@PathVariable int id){
+        ClienteRepository.excluirCliente(id);
+    }
 }
