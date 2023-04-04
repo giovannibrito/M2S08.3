@@ -1,15 +1,13 @@
 package com.example.exercicio5.models;
 
-import com.example.exercicio5.repository.ClienteRepository;
 import com.example.exercicio5.repository.ContaRepository;
-import lombok.Getter;
+import lombok.Data;
 
 import java.util.Objects;
 
+@Data
 public class Conta {
-    @Getter
     private int id;
-    @Getter
     private int cliente;
     private double saldo;
 
